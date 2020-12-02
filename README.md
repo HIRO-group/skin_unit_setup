@@ -13,7 +13,7 @@ Documentation on how to setup the skin units from the HIRO group.
 
 Once you are running the skin unit ROS publishers with `rosrun rosserial_python serial_node.py tcp` (make sure to run `roscore` in another terminal), you can echo out the data with:
 
-```
+```sh
 # to view imu data:
 rostopic echo /imu_data1
 
