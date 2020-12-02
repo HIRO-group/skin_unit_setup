@@ -1,7 +1,7 @@
 # HIRO Skin Unit Setup
-Documentation on how to setup the skin units from the HIRO group. The skin unit shown below will provide you with IMU `/imu_data#` and proximity `/proximity_data#` data over wifi by publishing data to ROS topics.
+The skin unit shown below will provide you with IMU `/imu_data#` and proximity `/proximity_data#` data over wifi by publishing data to ROS topics. In this tutorial we will demonstrate how to connect a given skin unit to your wifi and view live data in ROS. 
 
-![](images/SU.jpg)
+<img src="images/SU.jpg" alt="drawing" width="300"/>
 
 
 
