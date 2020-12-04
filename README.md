@@ -39,6 +39,8 @@ We now outline the steps to make the sensor unit publish readings to a ROS topic
 
 ## Uploading New Code
 
+For uploading new code, we highly recommend using the Arduino IDE, in which you can upload changed code to our skin units.
+
 ## Visualization using PlotJuggler
 
 Once you are running the skin unit ROS publishers with `rosrun rosserial_python serial_node.py tcp` (make sure to run `roscore` in another terminal), you can echo out the data with:
