@@ -35,6 +35,20 @@ We now outline the steps to make the sensor unit publish readings to a ROS topic
     rm -rf ros_lib
     rosrun rosserial_arduino make_libraries.py .
     ```
+1. Install the [ESP8266 chip in the Arduino board manage](https://github.com/esp8266/Arduino#installing-with-boards-manager). In the Arduino IDE go to file->preferences and add `https://arduino.esp8266.com/stable/package_esp8266com_index.json` to the _Additional Boards Manager URLs_ as seen below.
+
+    <img src="images/esp8266.png" alt="drawing" width="400"/>
+    
+1. Set the Arduino board to the newly installed Generic ESP8266 Module by following the path Tools->Board: "YOUR_CURRENT_BOARD"->ESP8266 Boards->Generic ESP8266 Module as seen below. 
+
+    <img src="images/set_board.png" alt="drawing" width="400"/>
+   
+
+1. Install the following libraries though your Arduino IDE by navigating to Sketch->Include Library->Manage Libraries and searching the following:
+    * SparkFunLSM6DS3
+    * SparkFun_VL53L1X
+    
+    The newly installed libraries shoule be visible at `YOUR_ARDUINO_LOCATION/libraries` as `Accelerometer_And_Gyroscope_LSM6DS3` and `SparkFun_VL53L1X_4m_Laser_Distance_Sensor` respectivly.
 
 
 ## Uploading New Code
