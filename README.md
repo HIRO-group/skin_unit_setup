@@ -94,4 +94,14 @@ rosrun plot_juggler PlotJuggler
 
 Upon running the above command, you'll be greeted with a cool meme, then a GUI that looks like this:
 
-<img src="images/blank_plot_juggler.png" alt="Blank Plot Juggler" width="600"/>
+<img src="images/blank_plot_juggler.png" alt="Blank Plot Juggler" width="500"/>
+
+From here, click on `Streaming`, and then on `Start: ROS Topic Subscriber`. You should see something like this:
+
+<img src="images/selecting_topics.png" alt="Selecting Topics" width="500"/>
+
+Select the topic you want, then click `OK`
+
+<img src="images/selecting_topics2.png" alt="Selecting Topics2" width="500"/>
+
+
