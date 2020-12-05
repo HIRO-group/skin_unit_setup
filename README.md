@@ -17,7 +17,6 @@ We now outline the steps to make the sensor unit publish readings to a ROS topic
 1. [Download the Ardunio IDE](https://www.arduino.cc/en/software)
     * This will be used to upload code containing your network name and password
 1. Clone this repository onto your computer with the command `git clone https://github.com/HIRO-group/skin_unit_setup.git`
-1. Launch the Arduino IDE and open the file `YOUR_DOWNLOAD_LOCATION/skin_unit_setup/su_with_proximity/su_with_proximity.ino`, this can be done with `ctrl+O` or by selecting file->open
 1. Connect the sensor unit to your computer with the USB to Micro connector so that code can be uploaded from the Arduino IDE
     * If you connect your battery to the sensor unit while it is plugged into your computer it will charge the battery
     * To show that the battery is charging a status LED will light up as seen below
@@ -35,7 +34,7 @@ We now outline the steps to make the sensor unit publish readings to a ROS topic
     rm -rf ros_lib
     rosrun rosserial_arduino make_libraries.py .
     ```
-1. Install the [ESP8266 chip in the Arduino board manage](https://github.com/esp8266/Arduino#installing-with-boards-manager). In the Arduino IDE go to file->preferences and add `https://arduino.esp8266.com/stable/package_esp8266com_index.json` to the _Additional Boards Manager URLs_ as seen below.
+1. Launch the Arduino IDE and install the [ESP8266 chip in the Arduino board manage](https://github.com/esp8266/Arduino#installing-with-boards-manager). In the Arduino IDE go to file->preferences and add `https://arduino.esp8266.com/stable/package_esp8266com_index.json` to the _Additional Boards Manager URLs_ as seen below.
 
     <img src="images/esp8266.png" alt="drawing" width="400"/>
     
@@ -49,6 +48,14 @@ We now outline the steps to make the sensor unit publish readings to a ROS topic
     * SparkFun_VL53L1X
     
     The newly installed libraries shoule be visible at `YOUR_ARDUINO_LOCATION/libraries` as `Accelerometer_And_Gyroscope_LSM6DS3` and `SparkFun_VL53L1X_4m_Laser_Distance_Sensor` respectivly.
+    
+1. In the Arduino IDE and open the file `YOUR_CLONE_LOCATION/skin_unit_setup/su_with_proximity/su_with_proximity.ino`, this can be done by selecting file->open.
+
+1. Set the following variables in the `su_with_proximity.ino`:
+    * `const char* ssid     = "YOUR_NETWORK_NAME";`
+    * `const char* ssid     = "YOUR_NETWORK_PASSWORD";`
+    * `IPAddress server(10, 0, 0, 165);  // IP of the computer that will be resiving the data/`
+    To find the IP Address of the your computer you can run the command `ifconfig` in your terminal. 
 
 
 ## Uploading New Code
