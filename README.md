@@ -104,4 +104,24 @@ Select the topic you want, then click `OK`
 
 <img src="images/selecting_topics2.png" alt="Selecting Topics2" width="500"/>
 
+Next, you'll see a list of updating (real time) topics:
+
+<img src="images/topics_to_view.png" alt="Topics list RT" width="500"/>
+
+
+You can select one topic:
+
+<img src="images/selecting_topic_to_view.png" alt="Topics list RT" width="500"/>
+
+Then, make sure to drag and drop the topic so you can see the below pic:
+
+<img src="images/one_topic.png" alt="Topics list RT" width="500"/>
+
+
+You can do this for multiple topics; for example, this is what the real time visualization of 2 skin unit IMU data topics looks like:
+
+<img src="images/two_topics.png" alt="Topics list RT" width="500"/>
+
+
+
 
