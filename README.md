@@ -1,4 +1,7 @@
 # HIRO Skin Unit Setup
+
+Below is a guide on how to setup our own custom skin units.
+
 The skin unit shown below will provide you with IMU `/imu_data#` and proximity `/proximity_data#` data over wifi by publishing data to ROS topics. In this tutorial we will demonstrate how to connect a given skin unit to your WiFi and view live data in ROS. 
 
 <img src="images/SU.jpg" alt="drawing" width="300"/>
@@ -91,4 +94,4 @@ rosrun plot_juggler PlotJuggler
 
 Upon running the above command, you'll be greeted with a cool meme, then a GUI that looks like this:
 
-
+<img src="images/blank_plot_juggler.png" alt="Blank Plot Juggler" width="600"/>
