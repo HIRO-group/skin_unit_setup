@@ -35,13 +35,9 @@
 //                                  //
 //////////////////////////////////////
 // WiFi Setting
-const char* ssid     = "2995-euclid-7";
-const char* password = "2995-euclid-7!";
-//const char* ssid     = "HIROlab2";
-//const char* password = "HIROlab322";
-//IPAddress server(10,0,0,155);  // Chang/e this to ROS_MASTER_IP
-//IPAddress server(172, 16, 0, 205);  // Chang/e this to ROS_MASTER_IP/
-IPAddress server(10, 0, 0, 165);  // Chang/e this to ROS_MASTER_IP/
+const char* ssid     = "YOUR_NETWORK_NAME";  // CHANGE: Your network name
+const char* password = "YOUR_NETWORK_PASSWORD"; // CHANGE: Your network password
+IPAddress server(10, 0, 0, 165);  // CHANGE: IP of the computer that will be resiving the data
 const uint16_t serverPort = 11411;
 // ROS Setting
 char imu_topic_name[] = "/imu_data1";
@@ -61,7 +57,6 @@ ros::Publisher imu_publisher(imu_topic_name, &imu_msg);
 unsigned long imu_time_counter;
 sensor_msgs::LaserScan distance_msg;
 ros::Publisher distance_publisher(distance_topic_name, &distance_msg);
-
 
 ////////// Sensors Setting //////////
 LSM6DS3 myIMU(I2C_MODE, 0x6a); //Default constructor is I2C, addr 0x6B
