@@ -58,11 +58,21 @@ git clone https://github.com/HIRO-group/skin_unit_setup.git
     
 1. In the Arduino IDE and open the file `YOUR_CLONE_LOCATION/skin_unit_setup/su_with_proximity/su_with_proximity.ino`, this can be done by selecting file->open.
 
-1. Set the following variables in the `su_with_proximity.ino`:
+1. Set the following variables in the `su_with_proximity.ino` file:
     * `const char* ssid     = "YOUR_NETWORK_NAME";`
     * `const char* ssid     = "YOUR_NETWORK_PASSWORD";`
     * `IPAddress server(10, 0, 0, 165);  // IP of the computer that will be resiving the data/`
-    To find the IP Address of the your computer you can run the command `ifconfig` in your terminal. 
+    To find the IP Address of the your computer you can run the command `ifconfig` in your terminal.
+    
+1. Set the serial port to the port connected to your skin unit board though Tools->Port: "YOUR CURRENT PORT" -> select the correct port. An example is given below, the port ID may be diffrent depending on your setup. 
+    
+    <img src="images/port.png" alt="drawing" width="400"/>
+    
+1. Click the Upload arrow at the top left of your Arduino IDE in order to upload your changed code to the skin unit.
+
+1. In two terminal windows run `roscore` and `rosrun rosserial_python serial_node.py tcp`, you should now be able to view the proximity and IMU data my running `rostopic echo /proximity_data1` or `rostopic echo /imu_data1` 
+   
+    
 
 
 ## Uploading New Code
