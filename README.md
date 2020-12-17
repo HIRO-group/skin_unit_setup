@@ -97,6 +97,18 @@ rostopic echo /imu_data1
 rostopic echo /proximity_data1
 ```
 
+**Note**: If you get this error when doing `rosrun`:
+
+```python
+NameError: global name 'BlockingIOError' is not defined
+```
+
+Then you'll need to directly call `python3` -- you'll need to `cd` into the directory where `serial_node.py` is (use `rospack list | grep rosserial_python` to find the location), then run:
+
+```sh
+python3 rosserial_python serial_node.py tcp
+```
+
 However, these commands don't *visually* show what the sensor is sensing, so we highly recommend using [PlotJuggler](https://github.com/facontidavide/PlotJuggler) to visualize your data.
 
 To install and use PlotJuggler:
@@ -105,7 +117,7 @@ To install and use PlotJuggler:
 sudo apt install ros-${ROS_DISTRO}-plotjuggler-ros
 
 # to run:
-rosrun plot_juggler PlotJuggler
+rosrun plotjuggler PlotJuggler
 ```
 
 Upon running the above command, you'll be greeted with a cool meme, then a GUI that looks like this:
@@ -150,6 +162,19 @@ sudo chmod 777 /dev/<port that you want to write to>
 ```
 
 - **Problem**: The port cannot be found.
-- **Solution**: A probable cause of this may be a finicky connection. By this, you can check the output of `dmesg`
+- **Solution**: A probable cause of this may be a finicky connection. By this, you can check the output of `dmesg` to see what's going on. If you see a bunch of errors and no confirmation that you are connected, the issue may be with the connection of the board itself. For example, we encountered an error where we couldn't find a port, and the reason turned out to be that the port in the skin unit was finicky, which we resoldered.
+
+- **Problem**: I'm not getting any sensor readings, but I'm connected to the network. What do I do?
+- **Solution**: In this case, there might be an error with the sensor initialization. Check the return value of the sensor class' `begin()` function. If it's *not* 0, then it's an error. You can try resetting the skin unit as well (via the reset button).
+
+- **Problem**: I'm not getting a connection over Wifi when running the serial node.
+- **Solution**: This most likely is an issue with your Wifi, *or* the SSID and/or password is incorrect.
+
+- **Problem**: The LED light to signify charging doesn't turn on when I plug the skin unit in to charge.
+- **Solution**: The connection port on the skin unit may have problems here -- it's probably an issue with the skin unit, not your computer.
+
+- **Problem**: 
+- **Solution**:
+
 
 
