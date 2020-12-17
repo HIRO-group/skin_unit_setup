@@ -173,8 +173,5 @@ sudo chmod 777 /dev/<port that you want to write to>
 - **Problem**: The LED light to signify charging doesn't turn on when I plug the skin unit in to charge.
 - **Solution**: The connection port on the skin unit may have problems here -- it's probably an issue with the skin unit, not your computer.
 
-- **Problem**: 
-- **Solution**:
-
 
 
