@@ -4,6 +4,8 @@ Below is a guide on how to setup our own custom skin units.
 
 The skin unit shown below will provide you with IMU `/imu_data#` and proximity `/proximity_data#` data over wifi by publishing data to ROS topics. In this tutorial, we'll demonstrate how to connect a given skin unit to your WiFi and view live data in ROS using PlotJuggler. 
 
+
+Below is a picture of one of our V1 skin units:
 <img src="images/SU.jpg" alt="drawing" width="300"/>
 
 
