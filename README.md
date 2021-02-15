@@ -6,6 +6,7 @@ The skin unit shown below will provide you with IMU `/imu_data#` and proximity `
 
 
 Below is a picture of one of our V1 skin units:
+
 <img src="images/SU.jpg" alt="drawing" width="300"/>
 
 
