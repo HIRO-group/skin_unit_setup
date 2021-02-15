@@ -13,7 +13,7 @@ Below is a picture of one of our V1 skin units:
 ## Hardware Setup
 In order to complete all parts of this tutorial, you should have access to: 
 
-1. A customer sensor unit provided form the HIRO lab
+1. A customer sensor unit provided from the HIRO lab
 2. [A USB to Micro connector](https://www.amazon.com/dp/B0711PVX6Z/ref=dp_prsubs_2)
 3. [A lithium polymer battery](https://www.adafruit.com/product/258)
 
